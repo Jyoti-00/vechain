@@ -1,0 +1,60 @@
+
+[2K[1G[1myarn run v1.22.22[22m
+[2K[1G[33mwarning[39m package.json: No license field
+[2K[1G[2m$ npx hardhat run scripts --network vechain_testnet[22m
+[33m[1mWARNING:[22m[39m You are currently using Node.js v19.8.1, which is not supported by Hardhat. This can lead to unexpected behavior. See https://hardhat.org/nodejs-versions
+
+
+Deploying on vechain_testnet with wallet 0x0Bd6caeb326516fe9271E77200b47bfF09622B23...
+Deploying EcoEarn contract...
+EcoEarn deployed to: 0xf49d138b06a880f89447ed24325032e3363674c1
+To start using the contract, we need to set the rewards amount and switch to the next cycle
+Error: transaction execution reverted (action="sendTransaction", data=null, reason=null, invocation=null, revert=null, transaction={ "data": "", "from": "0x0Bd6caeb326516fe9271E77200b47bfF09622B23", "to": "0xf49d138b06a880F89447ED24325032E3363674c1" }, receipt={ "_type": "TransactionReceipt", "blobGasPrice": null, "blobGasUsed": null, "blockHash": "0x013028bbdfce0d0bbeacbda04da3835e48f88559b1790aeb964a650f2cb44137", "blockNumber": 19933371, "contractAddress": null, "cumulativeGasUsed": "0", "from": "0x0Bd6caeb326516fe9271E77200b47bfF09622B23", "gasPrice": "0", "gasUsed": "26433", "hash": "0x506c7895abf57bc8d389d324cc1e3634b624ae8cc574a5a5e31c64599c88907a", "index": 0, "logs": [  ], "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", "root": null, "status": 0, "to": "0xf49d138b06a880F89447ED24325032E3363674c1" }, code=CALL_EXCEPTION, version=6.13.2)
+    at makeError (/Users/madmaxx/Desktop/zenvold/zenvold/node_modules/[4m@vechain[24m/sdk-core/node_modules/[4methers[24m/src.ts/utils/errors.ts:694:21)
+    at assert (/Users/madmaxx/Desktop/zenvold/zenvold/node_modules/[4m@vechain[24m/sdk-core/node_modules/[4methers[24m/src.ts/utils/errors.ts:715:25)
+    at checkReceipt (/Users/madmaxx/Desktop/zenvold/zenvold/node_modules/[4m@vechain[24m/sdk-core/node_modules/[4methers[24m/src.ts/providers/provider.ts:1585:19)
+    at ContractTransactionResponse.wait (/Users/madmaxx/Desktop/zenvold/zenvold/node_modules/[4m@vechain[24m/sdk-core/node_modules/[4methers[24m/src.ts/providers/provider.ts:1602:24)
+[90m    at processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+    at async ContractTransactionResponse.wait (/Users/madmaxx/Desktop/zenvold/zenvold/node_modules/[4m@vechain[24m/sdk-core/node_modules/[4methers[24m/src.ts/contract/wrappers.ts:136:25)
+    at async deploy [90m(/Users/madmaxx/Desktop/zenvold/zenvold/apps/contracts/[39mscripts/deploy.ts:67:33[90m)[39m
+    at async execute [90m(/Users/madmaxx/Desktop/zenvold/zenvold/apps/contracts/[39mscripts/index.ts:7:5[90m)[39m {
+  code: [32m'CALL_EXCEPTION'[39m,
+  action: [32m'sendTransaction'[39m,
+  data: [1mnull[22m,
+  reason: [1mnull[22m,
+  invocation: [1mnull[22m,
+  revert: [1mnull[22m,
+  transaction: {
+    to: [32m'0xf49d138b06a880F89447ED24325032E3363674c1'[39m,
+    from: [32m'0x0Bd6caeb326516fe9271E77200b47bfF09622B23'[39m,
+    data: [32m''[39m
+  },
+  receipt: TransactionReceipt {
+    provider: HardhatEthersProvider {
+      _hardhatProvider: [36m[HardhatVeChainProvider][39m,
+      _networkName: [32m'vechain_testnet'[39m,
+      _blockListeners: [],
+      _transactionHashListeners: Map(0) {},
+      _eventListeners: []
+    },
+    to: [32m'0xf49d138b06a880F89447ED24325032E3363674c1'[39m,
+    from: [32m'0x0Bd6caeb326516fe9271E77200b47bfF09622B23'[39m,
+    contractAddress: [1mnull[22m,
+    hash: [32m'0x506c7895abf57bc8d389d324cc1e3634b624ae8cc574a5a5e31c64599c88907a'[39m,
+    index: [33m0[39m,
+    blockHash: [32m'0x013028bbdfce0d0bbeacbda04da3835e48f88559b1790aeb964a650f2cb44137'[39m,
+    blockNumber: [33m19933371[39m,
+    logsBloom: [32m'0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'[39m,
+    gasUsed: [33m26433n[39m,
+    blobGasUsed: [90mundefined[39m,
+    cumulativeGasUsed: [33m0n[39m,
+    gasPrice: [33m0n[39m,
+    blobGasPrice: [90mundefined[39m,
+    type: [33m0[39m,
+    status: [33m0[39m,
+    root: [90mundefined[39m
+  },
+  shortMessage: [32m'transaction execution reverted'[39m
+}
+[2K[1G[31merror[39m Command failed with exit code 1.
+[2K[1G[34minfo[39m Visit [1mhttps://yarnpkg.com/en/docs/cli/run[22m for documentation about this command.

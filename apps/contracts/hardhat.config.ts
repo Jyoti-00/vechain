@@ -28,7 +28,7 @@ module.exports = {
         hardhat: {
             chainId: 1337,
         },
-        vechain_solo: {
+       /* vechain_solo: {
             url: 'http://localhost:8669',
             accounts: {
                 mnemonic: 'denial kitchen pet squirrel other broom bar gas better priority spoil cross',
@@ -38,7 +38,7 @@ module.exports = {
             restful: true,
             gas: 10000000,
             count: 10,
-        },
+        }, */
         vechain_testnet: {
             url: process.env.TESTNET_URL ?? '',
             accounts: {
