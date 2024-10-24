@@ -9,7 +9,7 @@ export const lightPrimary = {
   "700": "#111F8D",
   "800": "#001665",
   "900": "#000B3C",
-  active: "#004cfc",
+  active: "#0a9400",
 };
 export const lightSecondary = {
   "50": "#F7FFD7",

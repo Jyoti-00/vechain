@@ -7,10 +7,10 @@ export const Navbar = () => {
       position={"sticky"}
       top={0}
       zIndex={10}
-      py={4}
+      py={2}
       h={"auto"}
       w={"full"}
-      bg={"#f7f7f7"}
+      bg={"#0a9400"}
     >
       <Container
         w="full"
@@ -21,10 +21,10 @@ export const Navbar = () => {
         maxW={"container.xl"}
       >
         <HStack flex={1} justifyContent={"start"}>
-          <Image src="/vebetterdao-logo.svg" />
+        <Image src="/logo.png" width="90px" height="70px" />
         </HStack>
 
-        <HStack flex={1} spacing={4} justifyContent={"end"}>
+        <HStack flex={1} spacing={1} justifyContent={"end"}>
           <ConnectWalletButton />
         </HStack>
       </Container>

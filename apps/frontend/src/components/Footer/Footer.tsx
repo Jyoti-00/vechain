@@ -15,6 +15,7 @@ import { TelegramButton } from "./components/TelegramButton";
 import { Socials } from "./components/Socials";
 import { PRIVACY_POLICY_LINK, TERMS_AND_CONDITIONS_LINK } from "../../const";
 import { BeBetterVeBetterIcon } from "../Icon";
+import image from "../logo.png";
 
 export const Footer: React.FC = () => {
   const desktopContent = (
@@ -48,7 +49,7 @@ export const Footer: React.FC = () => {
           lineHeight="17px"
           color="#8c8c8c"
         >
-          2024 VeBetterDAO. All rights reserved.
+          2024 ZenVolt. All rights reserved.
         </Text>
         <HStack spacing={4}>
           <Link href={PRIVACY_POLICY_LINK} isExternal>

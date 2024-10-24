@@ -4,18 +4,18 @@ import { Step } from "./Step";
 const Steps = [
   {
     icon: "/steps/1.svg",
-    title: "Purchase eco-friendly products",
-    description: "Buy products that are eco-friendly and sustainable.",
+    title: "Connect Wallet",
+    description: "To join us, all you need to do is connect your VeWorld wallet! ",
   },
   {
     icon: "/steps/2.svg",
-    title: "Upload the receipt",
-    description: "Upload your receipt and AI will verify the products.",
+    title: "Drive & Play",
+    description: "Interested in making the world better just by driving efficiently?Yes, we know we are!",
   },
   {
     icon: "/steps/3.svg",
-    title: "Earn rewards",
-    description: "Earn B3TR for purchasing eco-friendly products.",
+    title: "Your Rewards!",
+    description: "Recieve automatically calculated BT3R token in your wallet and cash out when needed! ",
   },
 ];
 

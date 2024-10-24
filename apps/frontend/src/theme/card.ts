@@ -27,7 +27,7 @@ const variants = {
     definePartsStyle({
       container: {
         bg: props.colorMode === "dark" ? "#1A1A1A" : "#FFF",
-        borderWidth: "1px",
+        borderWidth: ".1px",
         borderColor: props.colorMode === "dark" ? "#2D2D2F" : "gray.100",
       },
     }),

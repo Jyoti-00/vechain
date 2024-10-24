@@ -23,9 +23,9 @@ function App() {
         <Navbar />
         <Flex flex={1}>
           <Container
-            mt={{ base: 4, md: 10 }}
-            maxW={"container.xl"}
-            mb={{ base: 4, md: 10 }}
+            mt={{ base: 1, md: 1 }}
+            maxW={"100vw"} 
+            mb={{ base: 1, md: 1 }}
             display={"flex"}
             flex={1}
             alignItems={"center"}
