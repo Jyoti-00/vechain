@@ -1,15 +1,10 @@
-// We recommend this pattern to be able to use async/await everywhere
+import { deploy } from "./deploy"; // Ensure correct path to the deploy file
 
-import { deploy } from './deploy';
+async function main() {
+  await deploy(); // Call the deploy function
+}
 
-// and properly handle errors.
-const execute = async () => {
-    await deploy();
-};
-
-execute()
-    .then(() => process.exit(0))
-    .catch(error => {
-        console.error(error);
-        process.exit(1);
-    });
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

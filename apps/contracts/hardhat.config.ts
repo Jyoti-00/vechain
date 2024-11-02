@@ -1,66 +1,48 @@
 import { HardhatUserConfig } from 'hardhat/config';
 import '@nomicfoundation/hardhat-toolbox';
-
 import '@nomiclabs/hardhat-truffle5';
 import '@vechain/sdk-hardhat-plugin';
 
-require('dotenv').config();
-
 const config: HardhatUserConfig = {
-    solidity: '0.8.20',
-};
-
-module.exports = {
-    solidity: {
-        version: '0.8.20',
-        evmVersion: 'paris',
-        settings: {
-            optimizer: {
-                enabled: true,
-                runs: 200,
-            },
-        },
+  solidity: {
+    version: '0.8.20',
+    evmVersion: 'paris',
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200,
+      },
     },
-    mocha: {
-        timeout: 180000,
+  },
+  mocha: {
+    timeout: 180000,
+  },
+  networks: {
+    hardhat: {
+      chainId: 1337,
     },
-    networks: {
-        hardhat: {
-            chainId: 1337,
-        },
-       /* vechain_solo: {
-            url: 'http://localhost:8669',
-            accounts: {
-                mnemonic: 'denial kitchen pet squirrel other broom bar gas better priority spoil cross',
-                count: 10,
-                path: "m/44'/818'/0'/0",
-            },
-            restful: true,
-            gas: 10000000,
-            count: 10,
-        }, */
-        vechain_testnet: {
-            url: process.env.TESTNET_URL ?? '',
-            accounts: {
-                mnemonic: process.env.MNEMONIC ?? '',
-                count: 10,
-                path: "m/44'/818'/0'/0",
-            },
-            restful: true,
-            gas: 10000000,
-            count: 10,
-        },
-        vechain_mainnet: {
-            url: process.env.MAINNET_URL ?? '',
-            accounts: {
-                mnemonic: process.env.MNEMONIC ?? '',
-                count: 1,
-                path: "m/44'/818'/0'/0",
-            },
-            restful: true,
-            gas: 10000000,
-        },
+    vechain_testnet: {
+      url: 'https://testnet.vechain.org',
+      accounts: {
+        mnemonic: 'word1 word2 word3 ... word12', // Replace with your actual 12-word mnemonic
+        count: 10,
+        path: "m/44'/818'/0'/0",
+      },
+      restful: true,
+      gasPrice: 20000000000,
+      gas: 5000000,
     },
+    vechain_mainnet: {
+      url: 'https://mainnet.vechain.org',
+      accounts: {
+        mnemonic: 'bomb orient save parrot stadium mass certain grow over visit mistake wreck', // Replace with your actual 12-word mnemonic
+        count: 1,
+        path: "m/44'/818'/0'/0",
+      },
+      restful: true,
+      gas: 10000000,
+    },
+  },
 };
 
 export default config;

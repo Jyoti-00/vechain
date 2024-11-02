@@ -14,13 +14,9 @@ import * as Contracts from ".";
 declare module "hardhat/types/runtime" {
   interface HardhatEthersHelpers extends HardhatEthersHelpersBase {
     getContractFactory(
-      name: "AccessControl",
+      name: "Ownable",
       signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.AccessControl__factory>;
-    getContractFactory(
-      name: "IAccessControl",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.IAccessControl__factory>;
+    ): Promise<Contracts.Ownable__factory>;
     getContractFactory(
       name: "IERC1155Errors",
       signerOrOptions?: ethers.Signer | FactoryOptions
@@ -34,10 +30,6 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.IERC721Errors__factory>;
     getContractFactory(
-      name: "IERC1155Receiver",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.IERC1155Receiver__factory>;
-    getContractFactory(
       name: "ERC20",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.ERC20__factory>;
@@ -50,68 +42,19 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.IERC20__factory>;
     getContractFactory(
-      name: "IERC721Receiver",
+      name: "VBetter",
       signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.IERC721Receiver__factory>;
+    ): Promise<Contracts.VBetter__factory>;
     getContractFactory(
-      name: "ERC165",
+      name: "ZenVolt",
       signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.ERC165__factory>;
-    getContractFactory(
-      name: "IERC165",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.IERC165__factory>;
-    getContractFactory(
-      name: "Math",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.Math__factory>;
-    getContractFactory(
-      name: "ReentrancyGuard",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.ReentrancyGuard__factory>;
-    getContractFactory(
-      name: "Strings",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.Strings__factory>;
-    getContractFactory(
-      name: "EcoEarn",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.EcoEarn__factory>;
-    getContractFactory(
-      name: "IToken",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.IToken__factory>;
-    getContractFactory(
-      name: "IX2EarnRewardsPool",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.IX2EarnRewardsPool__factory>;
-    getContractFactory(
-      name: "B3TR_Mock",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.B3TR_Mock__factory>;
-    getContractFactory(
-      name: "IX2EarnAppsMock",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.IX2EarnAppsMock__factory>;
-    getContractFactory(
-      name: "X2EarnAppsMock",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.X2EarnAppsMock__factory>;
-    getContractFactory(
-      name: "X2EarnRewardsPoolMock",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.X2EarnRewardsPoolMock__factory>;
+    ): Promise<Contracts.ZenVolt__factory>;
 
     getContractAt(
-      name: "AccessControl",
+      name: "Ownable",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
-    ): Promise<Contracts.AccessControl>;
-    getContractAt(
-      name: "IAccessControl",
-      address: string | ethers.Addressable,
-      signer?: ethers.Signer
-    ): Promise<Contracts.IAccessControl>;
+    ): Promise<Contracts.Ownable>;
     getContractAt(
       name: "IERC1155Errors",
       address: string | ethers.Addressable,
@@ -128,11 +71,6 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.IERC721Errors>;
     getContractAt(
-      name: "IERC1155Receiver",
-      address: string | ethers.Addressable,
-      signer?: ethers.Signer
-    ): Promise<Contracts.IERC1155Receiver>;
-    getContractAt(
       name: "ERC20",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
@@ -148,79 +86,20 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.IERC20>;
     getContractAt(
-      name: "IERC721Receiver",
+      name: "VBetter",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
-    ): Promise<Contracts.IERC721Receiver>;
+    ): Promise<Contracts.VBetter>;
     getContractAt(
-      name: "ERC165",
+      name: "ZenVolt",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
-    ): Promise<Contracts.ERC165>;
-    getContractAt(
-      name: "IERC165",
-      address: string | ethers.Addressable,
-      signer?: ethers.Signer
-    ): Promise<Contracts.IERC165>;
-    getContractAt(
-      name: "Math",
-      address: string | ethers.Addressable,
-      signer?: ethers.Signer
-    ): Promise<Contracts.Math>;
-    getContractAt(
-      name: "ReentrancyGuard",
-      address: string | ethers.Addressable,
-      signer?: ethers.Signer
-    ): Promise<Contracts.ReentrancyGuard>;
-    getContractAt(
-      name: "Strings",
-      address: string | ethers.Addressable,
-      signer?: ethers.Signer
-    ): Promise<Contracts.Strings>;
-    getContractAt(
-      name: "EcoEarn",
-      address: string | ethers.Addressable,
-      signer?: ethers.Signer
-    ): Promise<Contracts.EcoEarn>;
-    getContractAt(
-      name: "IToken",
-      address: string | ethers.Addressable,
-      signer?: ethers.Signer
-    ): Promise<Contracts.IToken>;
-    getContractAt(
-      name: "IX2EarnRewardsPool",
-      address: string | ethers.Addressable,
-      signer?: ethers.Signer
-    ): Promise<Contracts.IX2EarnRewardsPool>;
-    getContractAt(
-      name: "B3TR_Mock",
-      address: string | ethers.Addressable,
-      signer?: ethers.Signer
-    ): Promise<Contracts.B3TR_Mock>;
-    getContractAt(
-      name: "IX2EarnAppsMock",
-      address: string | ethers.Addressable,
-      signer?: ethers.Signer
-    ): Promise<Contracts.IX2EarnAppsMock>;
-    getContractAt(
-      name: "X2EarnAppsMock",
-      address: string | ethers.Addressable,
-      signer?: ethers.Signer
-    ): Promise<Contracts.X2EarnAppsMock>;
-    getContractAt(
-      name: "X2EarnRewardsPoolMock",
-      address: string | ethers.Addressable,
-      signer?: ethers.Signer
-    ): Promise<Contracts.X2EarnRewardsPoolMock>;
+    ): Promise<Contracts.ZenVolt>;
 
     deployContract(
-      name: "AccessControl",
+      name: "Ownable",
       signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.AccessControl>;
-    deployContract(
-      name: "IAccessControl",
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.IAccessControl>;
+    ): Promise<Contracts.Ownable>;
     deployContract(
       name: "IERC1155Errors",
       signerOrOptions?: ethers.Signer | DeployContractOptions
@@ -234,10 +113,6 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.IERC721Errors>;
     deployContract(
-      name: "IERC1155Receiver",
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.IERC1155Receiver>;
-    deployContract(
       name: "ERC20",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.ERC20>;
@@ -250,68 +125,19 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.IERC20>;
     deployContract(
-      name: "IERC721Receiver",
+      name: "VBetter",
       signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.IERC721Receiver>;
+    ): Promise<Contracts.VBetter>;
     deployContract(
-      name: "ERC165",
+      name: "ZenVolt",
       signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.ERC165>;
-    deployContract(
-      name: "IERC165",
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.IERC165>;
-    deployContract(
-      name: "Math",
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.Math>;
-    deployContract(
-      name: "ReentrancyGuard",
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.ReentrancyGuard>;
-    deployContract(
-      name: "Strings",
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.Strings>;
-    deployContract(
-      name: "EcoEarn",
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.EcoEarn>;
-    deployContract(
-      name: "IToken",
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.IToken>;
-    deployContract(
-      name: "IX2EarnRewardsPool",
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.IX2EarnRewardsPool>;
-    deployContract(
-      name: "B3TR_Mock",
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.B3TR_Mock>;
-    deployContract(
-      name: "IX2EarnAppsMock",
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.IX2EarnAppsMock>;
-    deployContract(
-      name: "X2EarnAppsMock",
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.X2EarnAppsMock>;
-    deployContract(
-      name: "X2EarnRewardsPoolMock",
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.X2EarnRewardsPoolMock>;
+    ): Promise<Contracts.ZenVolt>;
 
     deployContract(
-      name: "AccessControl",
+      name: "Ownable",
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.AccessControl>;
-    deployContract(
-      name: "IAccessControl",
-      args: any[],
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.IAccessControl>;
+    ): Promise<Contracts.Ownable>;
     deployContract(
       name: "IERC1155Errors",
       args: any[],
@@ -328,11 +154,6 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.IERC721Errors>;
     deployContract(
-      name: "IERC1155Receiver",
-      args: any[],
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.IERC1155Receiver>;
-    deployContract(
       name: "ERC20",
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
@@ -348,70 +169,15 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.IERC20>;
     deployContract(
-      name: "IERC721Receiver",
+      name: "VBetter",
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.IERC721Receiver>;
+    ): Promise<Contracts.VBetter>;
     deployContract(
-      name: "ERC165",
+      name: "ZenVolt",
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.ERC165>;
-    deployContract(
-      name: "IERC165",
-      args: any[],
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.IERC165>;
-    deployContract(
-      name: "Math",
-      args: any[],
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.Math>;
-    deployContract(
-      name: "ReentrancyGuard",
-      args: any[],
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.ReentrancyGuard>;
-    deployContract(
-      name: "Strings",
-      args: any[],
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.Strings>;
-    deployContract(
-      name: "EcoEarn",
-      args: any[],
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.EcoEarn>;
-    deployContract(
-      name: "IToken",
-      args: any[],
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.IToken>;
-    deployContract(
-      name: "IX2EarnRewardsPool",
-      args: any[],
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.IX2EarnRewardsPool>;
-    deployContract(
-      name: "B3TR_Mock",
-      args: any[],
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.B3TR_Mock>;
-    deployContract(
-      name: "IX2EarnAppsMock",
-      args: any[],
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.IX2EarnAppsMock>;
-    deployContract(
-      name: "X2EarnAppsMock",
-      args: any[],
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.X2EarnAppsMock>;
-    deployContract(
-      name: "X2EarnRewardsPoolMock",
-      args: any[],
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.X2EarnRewardsPoolMock>;
+    ): Promise<Contracts.ZenVolt>;
 
     // default types
     getContractFactory(

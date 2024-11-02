@@ -1,0 +1,9 @@
+2024-10-25T06:49:02.288232Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo/cookies/1.cookie"), AnchoredSystemPathBuf(".turbo/cookies/.turbo-cookie")}
+2024-10-25T06:49:02.288249Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-10-25T06:49:02.488407Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/contracts/.turbo/turbo-deploy$colon$testnet.log"), AnchoredSystemPathBuf(".turbo/cookies/2.cookie")}
+2024-10-25T06:49:02.488417Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@repo/contracts"), path: AnchoredSystemPathBuf("apps/contracts") }, WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-10-25T06:49:03.888198Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/contracts/cache/solidity-files-cache.json")}
+2024-10-25T06:49:03.888207Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@repo/contracts"), path: AnchoredSystemPathBuf("apps/contracts") }}))
+2024-10-25T06:49:03.908748Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2024-10-25T06:49:04.788482Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/contracts/.turbo/turbo-deploy$colon$testnet.log")}
+2024-10-25T06:49:04.788492Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@repo/contracts"), path: AnchoredSystemPathBuf("apps/contracts") }}))
