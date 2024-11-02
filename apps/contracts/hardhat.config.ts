@@ -35,7 +35,7 @@ const config: HardhatUserConfig = {
     vechain_mainnet: {
       url: 'https://mainnet.vechain.org',
       accounts: {
-        mnemonic: 'bomb orient save parrot stadium mass certain grow over visit mistake wreck', // Replace with your actual 12-word mnemonic
+        mnemonic: '', // Replace with your actual 12-word mnemonicc
         count: 1,
         path: "m/44'/818'/0'/0",
       },
